@@ -2,6 +2,8 @@ version: "3.7"
 services:
   operator:
     build: .
-    image: python_template:0.1.0
+    image: assemgly_ai:0.1.0
+    env_file:
+      - default.env
     volumes: 
       - ${PWD}:/usr/app/src/
