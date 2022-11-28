@@ -18,9 +18,34 @@ CONTENT_URL=https://augie-public-test.s3.amazonaws.com/89e5915c-cf8b-4f18-9b22-3
 docker-compose up --build
 ```
 
+## settings
+
+```python
+def request_transcript():
+    transcript_request = {
+        'audio_url': content_url,
+        #'filter_profanity': True,    # Profanity Filtering                  https://www.assemblyai.com/docs/core-transcription#profanity-filtering
+        #'punctuate': True,           # Automate Punctuation and Casing      https://www.assemblyai.com/docs/core-transcription#automatic-punctuation-and-casing
+        #'language_detection': True,  # Automatic Language Detection         https://www.assemblyai.com/docs/core-transcription#automatic-language-detection
+        #'auto_highlights': True,     # Detect Important Phrases and Words   https://www.assemblyai.com/docs/audio-intelligence#detect-important-phrases-and-words
+        #'content_safety': True,      # Content Moderation                   https://www.assemblyai.com/docs/audio-intelligence#content-moderation
+        #'iab_categories': True,      # Topic Detection(IAB Categories)      https://www.assemblyai.com/docs/audio-intelligence#topic-detection-iab-classification
+        #'sentiment_analysis': True,  # Sentiment Analysis                   https://www.assemblyai.com/docs/audio-intelligence#sentiment-analysis
+        #'summary_type': 'bullets',   # Summary bullets                      https://www.assemblyai.com/docs/audio-intelligence#summarization
+        #'summary_type': 'gist',      # Summary gist
+        #'summary_type': 'headline',  # Summary headline
+        #'summary_type': 'paragraph', # Summary paragraph
+        #'auto_chapters': True,       # Automatic Chapters                   https://www.assemblyai.com/docs/audio-intelligence#auto-chapters
+        #'entity_detection': True,    # Entity Detection                     https://www.assemblyai.com/docs/audio-intelligence#entity-detection
+        'dual_channel': False
+    }
+```
+
 ## results
 
-### paragraph
+output will be saved to `data.*.*` files
+
+### paragraph example
 
 ```json
 [

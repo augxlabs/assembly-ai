@@ -2,7 +2,7 @@ version: "3.7"
 services:
   operator:
     build: .
-    image: assemgly_ai:0.1.0
+    image: assembly_ai:0.1.0    
     env_file:
       - default.env
     volumes: 
